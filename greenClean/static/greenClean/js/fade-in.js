@@ -1,19 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const fadeIns = document.querySelectorAll(".fade-out");
-    window.addEventListener("scroll", () => fadeIn(fadeIns))
-    fadeIn(fadeIns);
-})
-
-function fadeIn(fadeIns) {
-    for (let i = 0; i < fadeIns.length; i++) {
-        let elem = fadeIns[i];
-        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
-        if (distInView < 0) {
-            elem.classList.remove("fade-out");
-            elem.classList.add("fade-in");
-        } else {
-            elem.classList.remove("fade-in")
-            elem.classList.add("fade-out")
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2caa4dde95be9eeffa2be62a0ee8eeb24c99b7f94801d8b24214702607a69ae
+size 633
