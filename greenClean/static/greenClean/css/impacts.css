@@ -1,0 +1,171 @@
+
+:root {
+   --impact-title-fs: 3.5rem;
+}
+.impacts-page{
+   position: relative;
+   width: 100vw;
+   padding: 2em 0;
+   /* background: linear-gradient(to bottom, #05c072 50%,#40b4da 50%); */
+   background: #05c072;
+
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+}
+.impacts-container {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+
+   position: relative;
+   right: 0px;
+   left: 0px;
+   inset: 0;
+   transition: inset linear 300ms, scale linear 300ms;
+   max-height: 100%;
+}
+.impact-cards {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   width: 80%;
+   overflow: hidden;
+}
+
+.impact-title{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: var(--impact-title-fs);
+   align-self: center;
+   padding: 60;
+   border-color:transparent;
+   color: #2d3339;
+}
+.impact-card{
+
+   width: 95%;
+   height: 100%;
+   flex-shrink: 0;
+   display: grid;
+   place-items: center;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+
+   gap: 1em;
+   margin: 2.5%;
+   box-shadow: 0 0 10px black;
+   border-radius: 20px;
+   padding: 1em 4em;
+   position: relative;
+   overflow: hidden;
+}
+.impact-img {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.impact-img img {
+   aspect-ratio: 1;
+}
+.img-i{
+   max-width: 512px;
+   min-width: 32px;
+   width: 100%;
+   aspect-ratio: 1;
+}
+.impact-content{
+   width: 100%;
+   display:flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center !important;
+   height: 100%;
+   overflow:hidden;
+}
+.impact-topic-head{
+   font-size:2rem;
+   border-style:solid;
+   padding:5px;
+   border: 3px hidden black;
+   border-bottom-style: solid;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   margin-bottom: 0.7em;
+}
+.impact-text{
+   height: max-content;
+   width: 100%;
+   font-size: 1.1rem;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #2d3339;
+}
+
+.impact-card :is(.left, .right) {
+   position: absolute;
+   aspect-ratio: 1;
+}
+.impact-card :is(.left, .right) button {
+   border: none;
+   background: rgba(0, 0, 0, 0.5);
+   color: white;
+   height: 100%;
+   width: 100%;
+   border-radius: 10px 0 0 10px;
+}
+.impact-card .left {
+   top: 0;
+   bottom: 0;
+   left: 0;
+   width: 50px;
+   height: 100%;
+}
+.impact-card .right {
+   top: 0;
+   bottom: 0;
+   right: 0;
+   width: 50px;
+   height: 100%;
+}
+
+
+.positions {
+   width: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+   /* border: 2px solid black; */
+}
+.position {
+   width: 10px;
+   aspect-ratio: 1;
+   border-radius: 50%;
+   background: rgba(100, 100, 100, 0.5);
+   transition: background-color ease-in-out 200ms, scale linear 100ms;
+}
+.position.active {
+   background: black;
+   scale: 1.2;
+}
+
+.positionsContainer {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   gap: 1.5em;
+}
+
+.positionsContainer :is(.left, .right) {
+   width: 40px;
+   aspect-ratio: 1;
+   display: grid;
+   place-items: center;
+}
+.positionsContainer :is(.left, .right) button {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   background-color: rgba(0, 0, 0, 0.5);
+   border: none;
+   color: white;
+}

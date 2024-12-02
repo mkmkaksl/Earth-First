@@ -1,0 +1,206 @@
+
+/* Calculator */
+:root {
+   --calc-heading: 3rem;
+}
+
+form {
+   width: 80%;
+   margin: 2em 0;
+   /* display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center; */
+
+   padding: 0;
+
+   /* gap: 2em; */
+
+   position: relative;
+   inset: 0;
+   left: 0;
+
+}
+.form-section {
+   width: 100%;
+   position: absolute;
+   inset: 0;
+
+   /* background-color: rgba(137, 221, 123, 0.7); */
+   background-color: var(--light-green-scheme);
+   border-radius: 20px;
+   padding: 2em 1.5em;
+   color: white;
+   flex-direction: column;
+   justify-content: space-evenly;
+   gap: 1em;
+
+   scale: 0 1;
+   opacity: 0;
+   transform-origin: top;
+   transition: scale linear 200ms, opacity linear 250ms;
+
+   text-align: center;
+}
+.form-section.active {
+   display: flex;
+   scale: 1 1;
+   position: relative;
+   opacity: 1;
+}
+.form-section.last {
+   position: absolute;
+   scale: 1 1;
+   opacity: 0;
+}
+
+.form-section a {
+   align-self: center;
+   color: black;
+   border-bottom: 1px solid black;
+   transition: color linear 200ms;
+}
+.form-section a:hover {
+   color: var(--dark-green-scheme);
+   border-bottom-color: var(--dark-green-scheme);
+}
+
+.form-heading h3 {
+   /* text-shadow: 2px 2px 5px black; */
+   -webkit-text-stroke: 1px black;
+   font-weight: bolder;
+   margin: 0;
+   font-size: var(--calc-heading);
+}
+
+.form-field-container {
+   /* background-color: #6FB463; */
+   background: var(--dark-green-scheme);
+   padding: 1em;
+   width: 100%;
+   border-radius: 10px;
+   text-align: center;
+   font-size: 1.25rem;
+}
+.form-field-container cite {
+   font-size: 0.7rem;
+}
+
+.form-section.active > .form-field-container:nth-child(2) select {
+   /* background-color: rgba(137, 221, 123, 1); */
+   background-color: var(--green-scheme);
+   border-radius: 10px;
+   border: none;
+   padding: 0.5em;
+   text-align: center;
+}
+
+
+.form-section.active > .form-field-container:nth-child(3) .form-field {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex: 1; 
+   gap: 0.5em;
+}
+.form-section.active > .form-field-container:nth-child(3) input {
+   /* background-color: rgba(137, 221, 123, 1); */
+   background-color: var(--green-scheme);
+   border-radius: 10px;
+   border: none;
+   padding: 0.5em;
+   text-align: center; width: 100%;
+}
+
+.form-section.active > .form-field-container:nth-child(4) {
+   font-size: 2rem;
+   padding: 0.2em 0;
+}
+
+.form-btns {
+   align-self: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+}
+
+.form-btn-container :is(button, a) {
+   background: white;
+   /* color: black; */
+   text-shadow: none;
+   /* border: 1px solid black; */
+   border: none;
+   border-radius: 10px;
+   padding: 0.5em 1em;
+   transition: background-color linear 200ms;
+}
+.form-btn-container :is(button, a):hover {
+   background-color: #EEE;
+}
+
+
+.production {
+   font-size: 2rem;
+   padding: 1em;
+   padding-bottom: 0;
+   display: grid;
+
+   place-items: center;
+}
+
+.production .prod_main {
+   font-size: 3rem;
+   border: 1px solid black;
+   -webkit-text-stroke: 1px black;
+   background-color: var(--dark-green-scheme);
+   padding: 0.5em;
+   border-radius: 10px;
+   font-weight: bolder;
+   margin: 0.8em;
+}
+.production .prod_intro {
+   -webkit-text-stroke: 1px black;
+   font-weight: bolder;
+}
+
+.production .form-btn-container {
+   padding: 0.5em;
+}
+.production .form-btn-container a {
+   font-size: 1.5rem;
+   margin: 1em;
+   margin-bottom: 0;
+   color: black;
+   width: 100%;
+   height: 100%;
+   border: none;
+   border-radius: 10px;
+}
+.production .details {
+   font-size: 1.2rem;
+   color: black;
+   text-shadow: none;
+   text-align: center;
+}
+.details > div {
+   margin: 0.5em;
+}
+.details .good {
+   background-color: rgb(0, 255, 0);
+   padding: 0.2em;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+.details .bad {
+   background-color: red;
+   padding: 0.2em;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+.details .neutral {
+   background-color: yellow;
+   padding: 0.2em;
+   border: 1px solid black;
+   border-radius: 5px;
+}

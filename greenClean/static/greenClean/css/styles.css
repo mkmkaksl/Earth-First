@@ -1,0 +1,135 @@
+
+
+*, *::before, *::after {
+      box-sizing: border-box;
+      background: none;
+      transition: opacity linear 200ms;
+      font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+:root {
+   --nav-height: 6em;
+   --nav-sm-wid: 200px;
+   --nav-sm-hei: 50px;
+ 
+   --body-bg: rgb(255, 253, 234);
+   --green-scheme: #05c072;
+   --blue-scheme: #40b4da;
+   --light-green-scheme: #50dd8e;
+   --dark-green-scheme: #039d5e;
+   /* --body-bg: white; */
+}
+label {
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*Body (1 Important Tag)*/
+body{
+   background-color: var(--body-bg) !important;
+   color: black;
+   margin: 0;
+   max-width: 100vw;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+   padding: 0.5em;
+   padding-bottom: 0;
+}
+
+.body{
+   color: black;
+   margin:0px;
+   display:flex;
+   justify-content: flex-start;
+   flex-direction:column;
+   align-items: center;
+   height: 100vh;
+}
+
+
+/* Reseting Properties Globally */
+a {
+      text-decoration: none !important;
+}
+
+/* Header */
+header {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      padding: 1em;
+}
+
+/*custom nav tab style */
+/* .nav-pills > .nav-link {
+   border-radius: 60px !important;
+   width: 120px !important; 
+   height: 120px !important; 
+   padding: 6px 0px !important; 
+}
+.nav-pills > .nav-link.active {
+   background-color: #198754 !important;
+}
+.nav-pills > .nav-link:not(.active) {
+   color: #212529 !important;
+} */
+
+/* General Classes (1 Important) */
+.flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+
+.fade-in {
+   opacity: 1;
+}
+.fade-out {
+   opacity: 0;
+}
+
+
+/* Borders */
+
+:is(.top-bd, .right-bd)::before {
+   content: '';
+   position: absolute;
+   background: var(--stat-separator);
+}
+.bottom-bd::after {
+   content: '';
+   position: absolute;
+   background: var(--stat-separator);
+}
+.top-bd::before {
+   bottom: 100%;
+   left: 0;
+   right: 0;
+   height: 1px;
+}
+.bottom-bd::after {
+   top: 100%;
+   left: 0;
+   right: 0;
+   height: 1px;
+}
+.right-bd::before {
+   top: 0;
+   bottom: 0;
+   left: 100%;
+   width: 1px;
+}
+
+
+.common-title {
+   text-align: center;
+   font-size: 3.5rem;
+   font-weight: 600;
+   color: #35875B;
+   margin: 0;
+   padding: 0 0 0.5em 0!important;
+}
